@@ -4,11 +4,9 @@ const main = Vue.createApp({});
 // Create a new Vue component
 main.component("nav-component", {
   template: `
-
-
-        <nav class="navbar navbar-expand-xl  " style='background-color:#dbe6da'>
+        <nav class="navbar navbar-expand-xl" style='background-color:#dbe6da'>
         <a class="navbar-brand" href="../home.html">
-        <img  class='mx-4 mt-3'src='/images/Screenshot 2022-11-07 at 12.40.27 AM.png' style='width : 220px; margin-left:10px'>
+        <img  class='mx-4 mt-3'src='/images/logo.png' style='width : 220px; margin-left:10px'>
         </a>
         <button class="navbar-toggler mx-4" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon " ></span>
@@ -32,7 +30,7 @@ main.component("nav-component", {
           
             </li>
             <li class="nav-item mx-4">
-              <a class="nav-link" href="/Lodginglisting/lodginglisting.html">
+              <a class="nav-link" href="/propertyCreation/propertyCreation.html">
          
             <br>
             <h1 class="fs-5 fw-bold">list your lodging <span class="sr-only">(current)</span></a></h1>
@@ -40,14 +38,14 @@ main.component("nav-component", {
             </li>
             </li>
             <li class="nav-item mx-4">
-            <a class="nav-link" href="/savedListing/saved_listings.html">
+            <a class="nav-link" href="/savedListing/savedListings.html">
            
             <br>
             <h1 class="fs-5 fw-bold">Saved listings <span class="sr-only">(current)</span></a></h1>
             
           </li>
             <li class="nav-item mx-4">
-            <a class="nav-link" href="/Loading/loadingprofile.html">
+            <a class="nav-link" href="/profile/profile.html">
            
             <br>
             <h1 class="fs-5 fw-bold">profile <span class="sr-only">(current)</span></a></h1>
@@ -104,9 +102,6 @@ main.mount("#main");
 //     </div>
 //     </nav>
 
-
-
-
 //     <nav class="navbar" style='background: #dbe6da; position:sticky ;overflow:hidden; white-space: nowrap'>
 //     <div class="container-fluid" >
 //         <ul class=" list-unstyled navbar my-1  mx-3 my-0 ">
@@ -127,9 +122,6 @@ main.mount("#main");
 
 //           </li>
 //             </ul>
-//         <div>
-        
-//         </div>
      
 //         <ul class=" list-unstyled navbar my-1  my-0 ">
 
@@ -139,11 +131,10 @@ main.mount("#main");
 //       </a>
 //         </li>
 //             <li class="nav-item text-center">
-//             <a class="nav-link" href="/roomieCreation.html">
+//             <a class="nav-link" href="roomieCreation/roomieCreation.html">
 //             <button type="button" class="btn  px-5   h-30" style='border-radius:30px; background-color:#67aa94 ;color:white; white-space:nowrap' >  List as a roommate  </button>
 //             </a>
 //             </li>
-
 
 //         <li class="nav-item text-center mx-3 fa-3x ">
 //         <a class="nav-link" href="/saved_listings.html">
@@ -152,7 +143,6 @@ main.mount("#main");
 //         </svg>
 //         </a>
 //         </li>
-
 //         </ul>     
 
 //     </div>

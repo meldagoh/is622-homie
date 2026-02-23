@@ -78,7 +78,7 @@ function populateInfo(){
         <div class="col-md-auto d-flex justify-content-center">
           <div></div>
             <label for="photo">
-              <img id='preview' src="profile_graphics.png" class="img-fluid mb-4" style="border-radius:10px ; max-width:300px"; width:100% />
+              <img id='preview' src="avatar.png" class="img-fluid mb-4" style="border-radius:10px ; max-width:300px"; width:100% />
             </label>
           </div>
 

@@ -172,20 +172,6 @@ onAuthStateChanged(auth, (user) => {
             }
         })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
     else {
