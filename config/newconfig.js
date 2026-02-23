@@ -16,7 +16,7 @@ const firebaseConfig = {
     storageBucket: "wad2-login.appspot.com",
     messagingSenderId: "416797111775",
     appId: "1:416797111775:web:f572cad671caf62a1a806a",
-    databaseURL: "https://console.firebase.google.com/u/0/project/is622-project/database/is622-project-default-rtdb/data/~2F"
+    databaseURL: "https://is622-project-default-rtdb.asia-southeast1.firebasedatabase.app/"
 };
 
 // Initialize Firebase

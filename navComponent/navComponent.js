@@ -4,7 +4,7 @@ const main = Vue.createApp({});
 // Create a new Vue component
 main.component("nav-component", {
   template: `
-        <nav class="navbar navbar-expand-xl" style='background-color:#dbe6da'>
+        <nav class="navbar navbar-expand-xl" style='background-color:#dbe6da;position:sticky;top:0;z-index:1050;width:100%'>
         <a class="navbar-brand" href="../home.html">
         <img  class='mx-4 mt-3'src='/images/logo.png' style='width : 220px; margin-left:10px'>
         </a>
