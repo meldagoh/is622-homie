@@ -38,7 +38,7 @@ main.component("nav-component", {
             </li>
             </li>
             <li class="nav-item mx-4">
-            <a class="nav-link" href="/savedListing/savedListings.html">
+            <a class="nav-link" href="/savedListings/savedListings.html">
            
             <br>
             <h1 class="fs-5 fw-bold">Saved listings <span class="sr-only">(current)</span></a></h1>

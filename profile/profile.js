@@ -26,7 +26,7 @@ if (signOutBtn != null) {
             })
 
             setTimeout(function(){
-              window.location.href = "/newlanding.html";
+              window.location.href = "../landing.html";
           }, 2000);
 
       }).catch((error) => {
