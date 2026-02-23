@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css" />
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"/>
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="/plugins/fontawesome/css/all.min.css">
+        <!-- Animation -->
+        <link rel="stylesheet" href="/plugins/animate-css/animate.css">
+        <!-- slick Carousel -->
+        <link rel="stylesheet" href="/plugins/slick/slick.css">
+        <link rel="stylesheet" href="/plugins/slick/slick-theme.css">
+
+    <link rel="stylesheet" href="/home.css">
+     <!-- head icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <!-- Vue 3: development -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- info btn styling -->
+    <!-- <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+
+    <!-- Vue -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <!-- SweetAlert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+
+    <title>Register Page</title>
+
+    <style>
+      
+        input[type="email"], input[type="password"], input[type="date"], input[type="username"], ::placeholder {
+            color: black;
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
+        }
+        
+        input[type=date]{
+            font-family: "Montserrat", sans-serif;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        .form-check-label {
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
+        }
+
+        input {
+            text-align: center;
+            width: 100%;
+        }
+
+        .input-group i {
+            position: absolute;
+        }
+
+        .input-group .bi {
+            padding: 7px;
+            color: white;
+            min-width: 50px;
+            text-align: center;
+            max-height: 75px;
+            font-size: 20px;
+            background-color: black;
+            border-radius: 10px;
+        }
+
+        .btn-secondary:hover {
+            color: white;
+        }
+        
+    </style>
+
+</head><body>
+    
+<!-- <script type="module" src="/register,login/firebaseconfig.js"></script> -->
+<script type="module" src = "register.js"></script>
+<div id="main">
+    <nav-component></nav-component>
+    </div>
+
+<div>
+    <div class="container justify-content-center w-75">
+        <h1 class="fw-bold text-center mb-4 mt-5">Welcome to Home:Bound <i class="bi bi-emoji-laughing ms-2"></i></h1>
+        <h3 class="fw-semibold text-center mb-5" style="text-transform: none;">Create an account to get started.</h3>
+    </div>
+    <div class="container" id="register">
+        <div class="row justify-content-center text-center align-items-center">
+            <div class="col-10 col-md-8 col-lg-6 text-center">
+                
+                <div id="username_error">
+                    <div class="input-group mb-4 h-75">
+                        <i class="bi bi-person-fill"></i>
+                        <input class="input-field form-control-lg bg-light" style="border-radius: 10px;"
+                            type="username" placeholder="Name" id="username" required>
+                    </div>
+                </div>
+                <div id="date_error">
+                    <div class="input-group mb-4 h-75">
+                        <i class="bi bi-calendar-fill h-100 text-center"></i>
+                        <input class="input-field form-control-lg bg-light" style="border-radius: 10px;"
+                            type="date"  id="dob" required>
+                    </div>
+                </div>
+                <div id="email_error">
+                    <div class="input-group mb-4 h-75">
+                        <i class="bi bi-envelope-fill"></i>
+                        <input class="input-field form-control-lg bg-light mb-2" style="border-radius: 10px;"
+                            type="email" placeholder="Email" id="email" required>
+                        <small style="color: grey; margin:auto">To list as a roommate, register with a school email.</small>
+                    </div>
+                </div>
+                <div id="password">
+                    <div class="input-group mb-4 h-75">
+                        <i class="bi bi-key-fill"></i>
+                        <input class="input-field form-control-lg bg-light" style="border-radius: 10px;"
+                            type="password" placeholder="Password" id="password1" required>
+                    </div>
+                </div>
+                
+                <div id="password_error">
+                    <div class="input-group mb-4 h-75">
+                        <i class="bi bi-key-fill"></i>
+                        <input class="input-field form-control-lg bg-light" style="border-radius: 10px;"
+                            type="password" placeholder="Re-enter Password" id="password2" required>
+                    </div>    
+                </div>     
+                
+                <!-- <div id="user_error">
+                    <div class="input-group mb-4">
+                        <div class="d-flex justify-content-center col text-center">
+                            <h6 class="fs-5 mt-1 me-4 mt-3">
+                                I am a...
+                            </h6>
+                            <div class="form-check form-check-inline mt-3 ms-2">
+                                <input class="form-check-input" type="radio" name="usertype"
+                                    id="inputRoommate" value="Roommate">
+                                <label class="form-check-label form-check-label-lg" for="inputRoommate">Roommate</label>
+                            </div>
+                            <div class="form-check form-check-inline mt-3 ms-2">
+                                <input class="form-check-input" type="radio" name="usertype"
+                                    id="inputLandlord" value="Landlord">
+                                <label class="form-check-label form-check-label-lg" for="inputLandlord">Landlord</label>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="text-center mt-2 h-75 mb-4">
+                    <div id="error"></div>
+                    <button type = "submit" class="mx-auto mt-3 mb-5 justify-content-center btn btn-secondary btn-lg w-50 rounded-pill" 
+                        style="border-radius: 30px" id="signUp" name="signup_submit" @click="signup">
+                        <a style="text-decoration:none; color:white; font-family: Montserrat, sans-serif;">Join the community</a>
+                        <!-- <i class="bi bi-arrow-right-circle ms-2"></i> -->
+                    </button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    </body>
+
+    <script>
+        // $('#listProperty').on('click', function () {
+        // Swal.fire({
+        //     position: 'center',
+        //     icon: 'success',
+        //     title: 'Property listed!',
+        //     showConfirmButton: false,
+        //     timer: 1500
+        //     })
+        // })
+
+    </script>
+
+<script src="/plugins/jQuery/jquery.min.js"></script>
+<!-- Bootstrap jQuery -->
+<script src="/plugins/bootstrap/bootstrap.min.js" defer></script>
+<!-- Slick Carousel -->
+<script src="/plugins/slick/slick.min.js"></script>
+  <script src="/plugins/slick/slick-animation.min.js"></script>
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <!-- Refer to my own external JS -->
+  <script src="/navComponent.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+  crossorigin="anonymous"></script>     
+</body>
+</html>
