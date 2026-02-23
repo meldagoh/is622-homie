@@ -10,7 +10,7 @@ onAuthStateChanged(auth, (user) => {
     const uid = user.uid;
     // console.log(user.uid)
     setTimeout(function(){
-        window.location.href = `../Profilepage/profile2.html?uid=${uid}`;
+        window.location.href = `../profile/profile.html?uid=${uid}`;
      }, 300);
     // ...
   } else {

@@ -3,7 +3,6 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background-color: #dbe6da;
 }
 .progress{
     position: relative;
@@ -15,8 +14,9 @@ body{
 }
 .progress .color{
     position: absolute;
-    background-color: #fdfbe4;
+    background-color: #cc91ac;
     width: 0px;
+    rgb(228, 238, 253)rgb(121, 158, 211);
     height: 10px;
     border-radius: 1000px;
     animation: progres 2s infinite linear;    
