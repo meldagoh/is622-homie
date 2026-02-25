@@ -235,16 +235,16 @@
         <script src="plugins/slick/slick-animation.min.js"></script>
         <!-- Color box -->
         <!-- <script src="plugins/colorbox/jquery.colorbox.js"></script> -->
-        <!-- shuffle -->
-        <script src="plugins/shuffle/shuffle.min.js" defer></script>
+        <!-- shuffle (use CDN fallback because local file is missing) -->
+        <script src="https://cdn.jsdelivr.net/npm/shufflejs@5/dist/shuffle.min.js" defer></script>
 
         <!-- Vue.js Version 3 CDN -->
-        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+            <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
 
         <!-- Refer to my own external JS -->
         <script src="navComponent/navComponent.js"></script>
         <script src="filter.js"></script>
-        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+            <!-- Removed duplicate Vue dev build -->
 
         <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
