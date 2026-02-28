@@ -4,17 +4,13 @@
 <title>Home</title>
 
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-
-    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css" />
     <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
     <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"/>
-
-    <!-- FontAwesome -->
+    <nav-component></nav-component>
     <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
     <!-- Animation -->
     <link rel="stylesheet" href="plugins/animate-css/animate.css">
@@ -46,8 +42,8 @@
     
     <section class="mx-auto" style="margin-top: 100px;">
         <div class="container">
-            <div class="row text-align-left">
-                <div class="col-lg-12">
+            <div class="row text-align-left ms-1">
+                <div>
                     <h1 class="fw-bold pb-2">Welcome! 
                         <img src="images/waveHello.png" style="width: 50px; margin-left: 5px; margin-bottom: 20px;">
                     </h1>
@@ -55,7 +51,7 @@
                 </div>
             </div>
 
-            <div id="lodging" class="tabcontent ">
+            <div id="lodging" class="tabcontent">
                 <div class="mt-0 mb-4">
                 <div class="btn-group mx-1 my-2">
                     <button type="button" class="btn btn-danger dropdown-toggle mb-3" data-bs-toggle="dropdown" aria-expanded="false">
@@ -91,55 +87,158 @@
                 
                 <input class="btn btn-primary mx-1 my-2 mb-4" type="reset" onclick='reset()' value="Reset">
 
-                <div id="lodgingDiv" >
-                    <div></div>
-                </div>
-            </div>
-            
-
-
-            </div>
-
-            <div id="roommates" class="tabcontent">
-                
-                    <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2">
+                <div id="lodgingDiv">
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
                         <div class="col">
-                            <div class="card "style='position:relative'  id="card5">
-                                <input type="checkbox" id="heart5" onchange="passValues(this)"><label  for="heart5" >&#9829</label></input>
-                                <img class="img-fluid card-img-top" src="images/room/room1.jpg" alt="project-img">
-                                <div class="card-body">
-                                    <h5 class="card-title text-success fw-bolder">Roomie Name</h5>
-                                    <div class="card-text d-flex pb-2">
-                                        <span><i class="bi bi-geo-alt-fill" ></i></span>
-                                        <div class="fw-light fs-6 px-2">East, West</div>
-                                    </div>
-                                    <div class="card-text d-flex pb-2">
-                                        <span><i class="bi bi-currency-dollar"></i></span>
-                                        <div class="fw-light fs-6 px-2">800 / month</div>
-                                    </div>
-                                    <div class="card-text d-flex pb-2">
-                                        <span>              
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-clock-fill mb-1 me-1" viewBox="0 0 16 16">
-                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                            <a href="propertyListings/propertyListing1.html">
+                                <div class="card">
+                                    <img src="images/houseListing1.jpg" class="card-img-top img-fluid">
+                                    <div class="card-body">
+                                        <h5 class="card-title">2 Havelock Road</h5>
+                                        <p class="lh-lg">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0b60f6" class="bi bi-geo-alt-fill mb-1 me-1" viewBox="0 0 16 16">
+                                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
                                             </svg>
-                                        </span>
-                                        <div class="fw-light fs-6 px-2">12 months</div>
+                                            2 Havelock Road, Singapore 059763
+                                            <br>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0b60f6" class="bi bi-coin mb-1 me-1" viewBox="0 0 16 16">
+                                            <path d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518z"/>
+                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                            <path d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11m0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12"/>
+                                            </svg>
+                                            $1800 / month
+                                            <br>
+
+                                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#9f3980" class="bi bi-person-standing-dress mb-1 me-1" viewBox="0 0 16 16">
+                                            <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m-.5 12.25V12h1v3.25a.75.75 0 0 0 1.5 0V12h1l-1-5v-.215a.285.285 0 0 1 .56-.078l.793 2.777a.711.711 0 1 0 1.364-.405l-1.065-3.461A3 3 0 0 0 8.784 3.5H7.216a3 3 0 0 0-2.868 2.118L3.283 9.079a.711.711 0 1 0 1.365.405l.793-2.777a.285.285 0 0 1 .56.078V7l-1 5h1v3.25a.75.75 0 0 0 1.5 0Z"/>
+                                            </svg>
+                                            <strong>2</strong>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0b60f6" class="bi bi-person-standing mb-1 ms-4 me-1" viewBox="0 0 16 16">
+                                            <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M6 6.75v8.5a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v2.75a.75.75 0 0 0 1.5 0v-2.5a.25.25 0 0 1 .5 0"/>
+                                            </svg>
+                                            <strong>1</strong>
+
+                                        </p>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
+                            
                         </div>
-                    </div>   
+                        <div class="col">
+                            <a href="propertyListings/propertyListing2.html">
+                                <div class="card">
+                                    <img src="images/houseListing2.jpg" class="card-img-top img-fluid">
+                                    <div class="card-body">
+                                        <h5 class="card-title">133 New Bridge Road</h5>
+                                        <p class="lh-lg">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0b60f6" class="bi bi-geo-alt-fill mb-1 me-1" viewBox="0 0 16 16">
+                                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                                            </svg>
+                                            133 New Bridge Road, Singapore 059413
+                                            <br>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0b60f6" class="bi bi-coin mb-1 me-1" viewBox="0 0 16 16">
+                                            <path d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518z"/>
+                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                            <path d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11m0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12"/>
+                                            </svg>
+                                            $1500 / month
+                                            <br>
+
+                                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#9f3980" class="bi bi-person-standing-dress mb-1 me-1" viewBox="0 0 16 16">
+                                            <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m-.5 12.25V12h1v3.25a.75.75 0 0 0 1.5 0V12h1l-1-5v-.215a.285.285 0 0 1 .56-.078l.793 2.777a.711.711 0 1 0 1.364-.405l-1.065-3.461A3 3 0 0 0 8.784 3.5H7.216a3 3 0 0 0-2.868 2.118L3.283 9.079a.711.711 0 1 0 1.365.405l.793-2.777a.285.285 0 0 1 .56.078V7l-1 5h1v3.25a.75.75 0 0 0 1.5 0Z"/>
+                                            </svg>
+                                            <strong>3</strong>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0b60f6" class="bi bi-person-standing mb-1 ms-4 me-1" viewBox="0 0 16 16">
+                                            <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M6 6.75v8.5a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v2.75a.75.75 0 0 0 1.5 0v-2.5a.25.25 0 0 1 .5 0"/>
+                                            </svg>
+                                            <strong>0</strong>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="propertyListings/propertyListing3.html">
+                                <div class="card">
+                                    <img src="images/houseListing3.jpg" class="card-img-top img-fluid">
+                                    <div class="card-body">
+                                        <h5 class="card-title">1 HarbourFront Walk</h5>
+                                        <p class="lh-lg">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0b60f6" class="bi bi-geo-alt-fill mb-1 me-1" viewBox="0 0 16 16">
+                                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                                            </svg>
+                                            1 HarbourFront Walk, Singapore 098585
+                                            <br>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0b60f6" class="bi bi-coin mb-1 me-1" viewBox="0 0 16 16">
+                                            <path d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518z"/>
+                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                            <path d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11m0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12"/>
+                                            </svg>
+                                            $750 / month
+                                            <br>
+
+                                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#9f3980" class="bi bi-person-standing-dress mb-1 me-1" viewBox="0 0 16 16">
+                                            <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m-.5 12.25V12h1v3.25a.75.75 0 0 0 1.5 0V12h1l-1-5v-.215a.285.285 0 0 1 .56-.078l.793 2.777a.711.711 0 1 0 1.364-.405l-1.065-3.461A3 3 0 0 0 8.784 3.5H7.216a3 3 0 0 0-2.868 2.118L3.283 9.079a.711.711 0 1 0 1.365.405l.793-2.777a.285.285 0 0 1 .56.078V7l-1 5h1v3.25a.75.75 0 0 0 1.5 0Z"/>
+                                            </svg>
+                                            <strong>1</strong>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0b60f6" class="bi bi-person-standing mb-1 ms-4 me-1" viewBox="0 0 16 16">
+                                            <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M6 6.75v8.5a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v2.75a.75.75 0 0 0 1.5 0v-2.5a.25.25 0 0 1 .5 0"/>
+                                            </svg>
+                                            <strong>2</strong>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+                        <div class="col">
+                            <a href="propertyListings/propertyListing4.html">
+                                <div class="card">
+                                    <img src="images/houseListing4.jpg" class="card-img-top img-fluid">
+                                    <div class="card-body">
+                                        <h5 class="card-title">201 Victoria Street</h5>
+                                        <p class="lh-lg">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0b60f6" class="bi bi-geo-alt-fill mb-1 m-1" viewBox="0 0 16 16">
+                                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                                            </svg>
+                                            201 Victoria St, Singapore 188067
+                                            <br>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0b60f6" class="bi bi-coin mb-1 me-1" viewBox="0 0 16 16">
+                                            <path d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518z"/>
+                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                            <path d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11m0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12"/>
+                                            </svg>
+                                            $500 / month
+                                            <br>
+
+                                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#9f3980" class="bi bi-person-standing-dress mb-1 me-1" viewBox="0 0 16 16">
+                                            <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m-.5 12.25V12h1v3.25a.75.75 0 0 0 1.5 0V12h1l-1-5v-.215a.285.285 0 0 1 .56-.078l.793 2.777a.711.711 0 1 0 1.364-.405l-1.065-3.461A3 3 0 0 0 8.784 3.5H7.216a3 3 0 0 0-2.868 2.118L3.283 9.079a.711.711 0 1 0 1.365.405l.793-2.777a.285.285 0 0 1 .56.078V7l-1 5h1v3.25a.75.75 0 0 0 1.5 0Z"/>
+                                            </svg>
+                                            <strong>0</strong>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0b60f6" class="bi bi-person-standing mb-1 ms-4 me-1" viewBox="0 0 16 16">
+                                            <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M6 6.75v8.5a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v2.75a.75.75 0 0 0 1.5 0v-2.5a.25.25 0 0 1 .5 0"/>
+                                            </svg>
+                                            <strong>2</strong>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-
-
-                
+            </div>
 
         </div>
-
-
-
-        </section><!-- Project area end -->
+        </section>
         
     <div id="wrapper">
         <footer id="footer" class="footer pb-3 flex align-items-center">
@@ -167,31 +266,17 @@
             </div>
           </footer>
     </div>
-
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
             crossorigin="anonymous"></script>
-
-        <!-- initialize jQuery Library -->
         <script src="plugins/jQuery/jquery.min.js"></script>
-        <!-- Bootstrap jQuery -->
         <script src="plugins/bootstrap/bootstrap.min.js" defer></script>
-        <!-- Slick Carousel -->
         <script src="plugins/slick/slick.min.js"></script>
         <script src="plugins/slick/slick-animation.min.js"></script>
-        <!-- Color box -->
-        <!-- <script src="plugins/colorbox/jquery.colorbox.js"></script> -->
-        <!-- shuffle (use CDN fallback because local file is missing) -->
         <script src="https://cdn.jsdelivr.net/npm/shufflejs@5/dist/shuffle.min.js" defer></script>
-
-        <!-- Vue.js Version 3 CDN -->
-            <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-
-        <!-- Refer to my own external JS -->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
         <script src="navComponent/navComponent.js"></script>
         <script src="filter.js"></script>
-            <!-- Removed duplicate Vue dev build -->
-
         <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
         <script src="home.js"></script>
@@ -201,5 +286,4 @@
         crossorigin="anonymous"></script>         
     </div>
 </body>
-
 </html>
