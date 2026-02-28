@@ -1,6 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600,600i,700,700i,800|Open+Sans:400,400i,600,600i,700,700i,800&display=swap);
-/* Typography
-================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
 body {
   background: #fff;
   color: #555;
@@ -66,35 +65,35 @@ h6
 {
   color: #212121;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Sora", sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased !important;
 }
 
 h1 {
   font-size: 36px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   line-height: 48px;
 }
 
 h2 {
   font-size: 28px;
   line-height: 36px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: -1px;
 }
 
 h3 {
   font-size: 24px;
   margin-bottom: 20px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: -0.5px;
 }
 
 h4 {
   font-size: 18px;
   line-height: 28px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: -0.2px;
 }
 
@@ -145,7 +144,7 @@ a:hover {
 a.read-more {
   color: #ffb600;
   font-weight: 700;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 a.read-more:hover {
@@ -276,13 +275,11 @@ a:focus {
   margin-bottom: 20px;
 }
 
-/* Title Border */
-/* Section title */
 .section-title {
   font-size: 18px;
   line-height: 28px;
   margin: 0;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: 300;
 }
 
@@ -453,7 +450,7 @@ ul.top-info-box li .info-box span.info-icon {
 
 ul.top-info-box li .info-box .info-box-content {
   display: inline-block;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Sora", sans-serif;
   flex-direction: column;
 }
 
@@ -594,11 +591,11 @@ ul.navbar-nav > li > a:after {
 }
 
 ul.navbar-nav > li > a {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Sora", sans-serif;
   color: #fff !important;
   text-rendering: optimizeLegibility;
   font-weight: 700 !important;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: -0.2px;
   font-size: 14px;
   margin: 0;
@@ -627,7 +624,7 @@ ul.navbar-nav > li > a {
 .dropdown-submenu > a:after {
   display: block;
   content: "\f105";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Sora", sans-serif;
   float: right;
   margin-top: 0;
   margin-right: -5px;
@@ -679,10 +676,10 @@ ul.navbar-nav > li > a {
 }
 
 .dropdown-menu li a {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Sora", sans-serif;
   display: block;
   font-size: 12px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: 700;
   line-height: normal;
   text-decoration: none;
@@ -849,25 +846,20 @@ ul.navbar-nav > li > a {
   margin-bottom: 20px;
 }
 
-/* Style the buttons that are used to open the tab content */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
+button {
+    font-family: "Sora", sans-serif;
+    background-color: inherit;
+    font-family: "Sora", sans-serif;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
 }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #67AB94;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #67AB94;
+button:hover {
+  color: #765333;
 }
 
 /* Style the tab content */
@@ -930,17 +922,17 @@ ul.navbar-nav > li > a {
   font-weight: 700;
   color: #000;
   font-size: 10px;
-  text-transform: uppercase;
-  
+  /* text-transform: uppercase; */
 }
+
 .shuffle-item .project-img-container:hover .project-item-info-content {
   opacity: 1;
   transform: perspective(1px) translate3d(0, 0, 0);
 }
 
-.general-btn .btn-primary:hover {
+/* .general-btn .btn-primary:hover {
   background: #000;
-}
+} */
 
 /* Project owl */
 .owl-theme.project-slide {
@@ -1035,13 +1027,13 @@ ul.navbar-nav > li > a {
 }
 .accordion-group .card-header .btn {
   font-size: 16px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: 700;
   padding: 13px 15px;
   padding-bottom: 10px;
 }
 .accordion-group .card-header .btn:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Sora", sans-serif;
   position: absolute;
   z-index: 0;
   font-size: 14px;
@@ -1119,7 +1111,7 @@ ul.navbar-nav > li > a {
 
 .quote-item .quote-text:before {
   content: "\f10d";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Sora", sans-serif;
   position: absolute;
   font-size: 30px;
   left: 0;
@@ -1236,7 +1228,7 @@ img.testimonial-thumb {
   position: relative;
   margin: 0 0 30px;
   padding-left: 15px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: #fff;
   border-left: 3px solid#67AB94;
 }
@@ -1323,7 +1315,7 @@ img.testimonial-thumb {
 
 .banner-title {
   color: #fff;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 58px;
   font-weight: 900;
 }
@@ -1358,7 +1350,7 @@ img.testimonial-thumb {
   padding: 0;
   background: none;
   font-weight: 700;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 12px;
 }
 .breadcrumb li a,
@@ -1702,7 +1694,7 @@ label {
   margin: 5px 0 15px;
   position: relative;
   line-height: 34px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 
 .entry-header .entry-title a {
@@ -1964,7 +1956,7 @@ label {
   position: relative;
   margin: 0 0 30px;
   padding-left: 15px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   border-left: 3px solid #ffb600;
 }
 
@@ -2109,7 +2101,7 @@ label {
 .widget.recent-posts .post-date {
   font-weight: 400;
   color: #999;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 
 /* Widget tags */
