@@ -8,19 +8,9 @@ main.component("nav-component", {
           <a class="navbar-brand" href="../home.html">
             <img class='mx-4'src='/images/logo.png' style='width: 150px;'>
           </a>
-
-          <button class="navbar-toggler mx-4" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
         
           <div class="navbar-nav id="navbarSupportedContent">
             <ul class="navbar-nav">
-
-              <li class="nav-item active mx-4">
-                <a class="nav-link" href="/home.html#project-area">
-                <br>
-                <h1 class="fs-5 fw-bold" style="color: #0b60f6;">Home<span class="sr-only">(current)</span></a></h1>
-              </li>
 
               <li class="nav-item mx-4">
                 <a class="nav-link" href="/savedListings/savedListings.html">
