@@ -15,13 +15,13 @@ main.component("nav-component", {
               <li class="nav-item mx-4">
                 <a class="nav-link" href="/savedListings/savedListings.html">
                 <br>
-                <h1 class="fs-5 fw-bold" style="color: #0b60f6;">Saved Listings<span class="sr-only">(current)</span></a></h1>
+                <h1 class="fs-5 fw-bold" style="color: #0b60f6;">Saved Listings</a></h1>
               </li>
 
               <li class="nav-item mx-4">
                 <a class="nav-link" href="/profile/profile.html">
                 <br>
-                <h1 class="fs-5 fw-bold" style="color: #0b60f6;">Profile<span class="sr-only">(current)</span></a></h1>
+                <h1 class="fs-5 fw-bold" style="color: #0b60f6;">Profile</a></h1>
               </li>
                             
             </ul>

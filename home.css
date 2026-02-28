@@ -1125,7 +1125,7 @@ img.testimonial-thumb {
 /*- Footer common */
 
 #wrapper {
-    height: 500px;
+    height: 350px;
     position: relative;
 }
         
@@ -1135,6 +1135,7 @@ img.testimonial-thumb {
   bottom: 0px;
   width:100%;
   position: absolute;
+  font-family: 'sora', sans-serif;
 }
 
 .footer-main {

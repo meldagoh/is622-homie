@@ -526,13 +526,8 @@ function addPlaces(places, map) {
         map.setCenter(place.geometry.location);
       });
 
-
-        
-
-
     }
   }
   }
-  
 
   window.initMap = initMap;

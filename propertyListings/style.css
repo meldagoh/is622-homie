@@ -1,10 +1,22 @@
-/**
- * @license
- * Copyright 2019 Google LLC. All Rights Reserved.
- * SPDX-License-Identifier: Apache-2.0
- */
-/* Optional: Makes the sample page fill the window. */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 
+body {
+    font-family: 'sora', sans-serif;
+}
+
+.carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+table th {
+    width: 40%;
+}
+
+.card img {
+    max-height: 150px;
+    object-fit: cover;
+}
 
 .wrapper, .sidebar {
   height: 100%;

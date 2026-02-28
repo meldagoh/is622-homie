@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2 Havelock Road</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css" />
     <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
@@ -18,25 +18,258 @@
     <!-- <link rel="stylesheet" href="plugins/colorbox/colorbox.css"> -->
     <!-- Template styles-->
     <link rel="stylesheet" href="home.css">
-    <!-- <link rel="stylesheet" href="landing.css"> -->
-    <!-- <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
-    <!-- <script type = "module"  src = "/register,login/firebaseconfig.js"></script> -->
-    <nav-component></nav-component>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="body-inner">
+    <div class="body-inner" id="main" style="margin-top: 150px;">
+
         <nav-component></nav-component>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="blue"
-                class="bi bi-piggy-bank-fill me-2" viewBox="0 0 16 16">
-                <path
-                  d="M7.964 1.527c-2.977 0-5.571 1.704-6.32 4.125h-.55A1 1 0 0 0 .11 6.824l.254 1.46a1.5 1.5 0 0 0 1.478 1.243h.263c.3.513.688.978 1.145 1.382l-.729 2.477a.5.5 0 0 0 .48.641h2a.5.5 0 0 0 .471-.332l.482-1.351c.635.173 1.31.267 2.011.267.707 0 1.388-.095 2.028-.272l.543 1.372a.5.5 0 0 0 .465.316h2a.5.5 0 0 0 .478-.645l-.761-2.506C13.81 9.895 14.5 8.559 14.5 7.069c0-.145-.007-.29-.02-.431.261-.11.508-.266.705-.444.315.306.815.306.815-.417 0 .223-.5.223-.461-.026a.95.95 0 0 0 .09-.255.7.7 0 0 0-.202-.645.58.58 0 0 0-.707-.098.735.735 0 0 0-.375.562c-.024.243.082.48.32.654a2.112 2.112 0 0 1-.259.153c-.534-2.664-3.284-4.595-6.442-4.595Zm7.173 3.876a.565.565 0 0 1-.098.21.704.704 0 0 1-.044-.025c-.146-.09-.157-.175-.152-.223a.236.236 0 0 1 .117-.173c.049-.027.08-.021.113.012a.202.202 0 0 1 .064.199Zm-8.999-.65a.5.5 0 1 1-.276-.96A7.613 7.613 0 0 1 7.964 3.5c.763 0 1.497.11 2.18.315a.5.5 0 1 1-.287.958A6.602 6.602 0 0 0 7.964 4.5c-.64 0-1.255.09-1.826.254ZM5 6.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-              </svg>
+
+        <div class="row p-5">
+            <div class="col px-5">
+
+                <!-- image carousel -->
+                 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner rounded-4 border border-5 border-dark">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="../images/houseListing1.jpg" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>The House</h5>
+                            <p>View of the property from the garden.</p>
+                        </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                        <img src="../images/houseListing2.jpg" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Left Neighbour's House</h5>
+                            <p>View of left neighbour's house from the kitchen.</p>
+                        </div>
+                        </div>
+                        <div class="carousel-item">
+                        <img src="../images/houseListing3.jpg" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Right Neighbour's House</h5>
+                            <p>View of right neighbour's house from the master bedroom.</p>
+                        </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <!-- google maps -->
+                <div class="mx-auto my-5">
+                    <h4 class="mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fbaee3" class="bi bi-signpost-fill mb-1 me-1" viewBox="0 0 16 16">
+                    <path d="M7.293.707A1 1 0 0 0 7 1.414V4H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h5v6h2v-6h3.532a1 1 0 0 0 .768-.36l1.933-2.32a.5.5 0 0 0 0-.64L13.3 4.36a1 1 0 0 0-.768-.36H9V1.414A1 1 0 0 0 7.293.707"/>
+                    </svg>
+                    Location
+                    </h4>
+                        <div>
+                            <iframe
+                                class="rounded-4 border border-5 border-dark w-100"
+                                height="500px"
+                                loading="lazy"
+                                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NIWI3Tv9iDPrlnowr_0ZqZWoAQydKJU&q=Havelock%20Road%2C%20Havelock%202%2C%20Singapore&maptype=roadmap" allowfullscreen>
+                            </iframe>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col px-5">
+                <h1 style="color: #0b60f6;">2 Havelock Road</h1>
+
+                <!-- description -->
+                <h4 class="mt-5 mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fbaee3" class="bi bi-file-richtext-fill mb-1 me-1" viewBox="0 0 16 16">
+                    <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M7 4.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m-.861 1.542 1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V7.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V7s1.54-1.274 1.639-1.208M5 9h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1m0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1"/>
+                    </svg>
+                    Description
+                </h4>
+                <p class="lh-base">
+                    2 Havelock Road is a 3-storey detached house located in District 15, Singapore. It is situated in the prestigious Havelock Road area, known for its luxurious properties and proximity to the city center
+                    It offers stunning views of the surrounding greenery and is conveniently located near amenities such as shopping malls, schools and public transportation. This property is ideal for families seeking a comfortable and elegant living space in one of Singapore's most sought-after neighborhoods.
+                </p>
+
+                <!-- contact details-->
+                <h4 class="mt-5 mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fbaee3" class="bi bi-person-rolodex mb-1 me-1" viewBox="0 0 16 16">
+                    <path d="M8 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                    <path d="M1 1a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h.5a.5.5 0 0 0 .5-.5.5.5 0 0 1 1 0 .5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5.5.5 0 0 1 1 0 .5.5 0 0 0 .5.5h.5a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H6.707L6 1.293A1 1 0 0 0 5.293 1zm0 1h4.293L6 2.707A1 1 0 0 0 6.707 3H15v10h-.085a1.5 1.5 0 0 0-2.4-.63C11.885 11.223 10.554 10 8 10c-2.555 0-3.886 1.224-4.514 2.37a1.5 1.5 0 0 0-2.4.63H1z"/>
+                    </svg>
+                    Contact Details
+                </h4>
+
+                <!-- realty agent's contact details -->
+                <div class="card mb-3">
+                    <div class="row g-0 flex-fill">
+                        <div class="col-auto">
+                            <img src="../images/person1.jpg" class="img-fluid rounded-start">
+                        </div>
+                        <div class="col my-auto ms-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Jaelyn Chui</h5>
+                                <small class="text-body-secondary">FLUFFY REALTY NETWORK</small>
+                                <p class="mt-2" style="font-size: small; margin-bottom: 0;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#0b60f6" class="bi bi-telephone-fill mb-1 me-2" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                                    </svg>
+                                    <span class="me-4">+65 9123 4567</span>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#0b60f6" class="bi bi-envelope-fill me-1" viewBox="0 0 16 16">
+                                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                                    </svg>
+                                    <span>jaelynchui@gmail.com</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- property specs -->
+                <h4 class="mt-5 mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fbaee3" class="bi bi-house-gear-fill mb-1 me-1" viewBox="0 0 16 16">
+                    <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708z"/>
+                    <path d="M11.07 9.047a1.5 1.5 0 0 0-1.742.26l-.02.021a1.5 1.5 0 0 0-.261 1.742 1.5 1.5 0 0 0 0 2.86 1.5 1.5 0 0 0-.12 1.07H3.5A1.5 1.5 0 0 1 2 13.5V9.293l6-6 4.724 4.724a1.5 1.5 0 0 0-1.654 1.03"/>
+                    <path d="m13.158 9.608-.043-.148c-.181-.613-1.049-.613-1.23 0l-.043.148a.64.64 0 0 1-.921.382l-.136-.074c-.561-.306-1.175.308-.87.869l.075.136a.64.64 0 0 1-.382.92l-.148.045c-.613.18-.613 1.048 0 1.229l.148.043a.64.64 0 0 1 .382.921l-.074.136c-.306.561.308 1.175.869.87l.136-.075a.64.64 0 0 1 .92.382l.045.149c.18.612 1.048.612 1.229 0l.043-.15a.64.64 0 0 1 .921-.38l.136.074c.561.305 1.175-.309.87-.87l-.075-.136a.64.64 0 0 1 .382-.92l.149-.044c.612-.181.612-1.049 0-1.23l-.15-.043a.64.64 0 0 1-.38-.921l.074-.136c.305-.561-.309-1.175-.87-.87l-.136.075a.64.64 0 0 1-.92-.382ZM12.5 14a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                    </svg>
+                    Property Specifications
+                </h4>
+                <table class="table table-hover">
+                    <tr>
+                        <th>Bedrooms</th>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <th>Bathrooms</th>
+                        <td>3</td>
+                    </tr>
+                    <tr>        
+                        <th>Room Area</th>
+                        <td>500 sqft</td>
+                    </tr>
+                    <tr>        
+                        <th>Room Furnishing</th>
+                        <td> Partially furnished</td>
+                    </tr>
+                    <tr>
+                        <th>Wi-Fi Access</th>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill mb-1 me-1" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                            </svg>
+                            Included
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- pricing -->
+                <h4 class="mt-5 mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fbaee3" class="bi bi-receipt mb-1 me-1" viewBox="0 0 16 16">
+                    <path d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27m.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0z"/>
+                    <path d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5m8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5"/>
+                    </svg>
+                    Pricing
+                </h4>
+                <table class="table table-hover">
+                    <tr>
+                        <th>Monthly Rent</th>
+                        <td>$1,800</td>
+                    </tr>
+                    <tr>
+                        <th>Security Deposit</th>
+                        <td>$2,000</td>
+                    </tr>
+                    <tr>
+                        <th>Utility Bills</th>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill me-1" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                            </svg>
+                        Included
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- availability & stay-->
+                <h4 class="mt-5 mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fbaee3" class="bi bi-receipt mb-1 me-1" viewBox="0 0 16 16">
+                    <path d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27m.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0z"/>
+                    <path d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5m8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5"/>
+                    </svg>
+                    Availability & Stay
+                </h4>
+                <table class="table table-hover">
+                    <tr>
+                        <th>Available Date</th>
+                        <td>1 March 2026</td>
+                    </tr>
+                    <tr>
+                        <th>Stay Duration</th>
+                        <td>6 months to 1 year
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Gender Distribution</th>
+                        <td>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#9f3980" class="bi bi-person-standing-dress mb-1 me-1" viewBox="0 0 16 16">
+                            <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m-.5 12.25V12h1v3.25a.75.75 0 0 0 1.5 0V12h1l-1-5v-.215a.285.285 0 0 1 .56-.078l.793 2.777a.711.711 0 1 0 1.364-.405l-1.065-3.461A3 3 0 0 0 8.784 3.5H7.216a3 3 0 0 0-2.868 2.118L3.283 9.079a.711.711 0 1 0 1.365.405l.793-2.777a.285.285 0 0 1 .56.078V7l-1 5h1v3.25a.75.75 0 0 0 1.5 0Z"/>
+                            </svg>
+                            2
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0b60f6" class="bi bi-person-standing mb-1 ms-4 me-1" viewBox="0 0 16 16">
+                            <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M6 6.75v8.5a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v2.75a.75.75 0 0 0 1.5 0v-2.5a.25.25 0 0 1 .5 0"/>
+                            </svg>
+                            1
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+       
+        <div id="wrapper" style="background-color: #3c78cf;">
+            <footer id="footer" class="footer pb-3 flex align-items-center">
+                <div class="container pb-4">
+                    <div class="row justify-content-between">
+                            <h3 class="pt-5 ps-4 fw-semibold" style="color:#fbaee3">About Us</h3>
+                            <p style="color:#fff" class="mt-3 mb-3 ps-4 fw-lighter">Find your affordable, clean and safe room to rent. Our mission is to simplify the process of connecting international students in 
+                                Singapore with and allow everyone to list their home easily.
+                                <br><br>
+                                <i>Made with love by Team 1 for IS622 Digital Product Management.</i>
+                            </p>
+                            <!-- <div class="footer-social ps-4">
+                                <ul>
+                                    <li><a href="https://facebook.com/homebound" aria-label="Facebook"><i
+                                                class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="https://twitter.com/homebound" aria-label="Twitter"><i
+                                                class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li><a href="https://instagram.com/homebound" aria-label="Instagram"><i
+                                                class="fab fa-instagram"></i></a></li>
+                                </ul>
+                            </div> -->
+                            <img src="../images/houseFooter.png" class="py-3" style="width: 120px;">
+                    </div>
+                </div>
+            </footer>
+        </div>
     </div>
     <div
-        <script src="../navComponent/navComponent.js"></script>
+        <script type="module" src="../navComponent/navComponent.js"></script>
         <script src="plugins/jQuery/jquery.min.js"></script>
         <script src="plugins/bootstrap/bootstrap.min.js" defer></script>
         <script src="plugins/slick/slick.min.js"></script>
