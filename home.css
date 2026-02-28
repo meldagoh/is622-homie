@@ -5,57 +5,6 @@ body {
   color: #555;
 }
 
-/* input[type="checkbox"] {
-  display: none;
-}
-
-
-input[type="checkbox"] + label {
-  position: relative;
-  padding-left: 35px;
-  display: inline-block;
-  font-size: 16px;
-}
-
-input[type="checkbox"] + label:before {
-  content: '\2661';
-  top: -11px;
-  left: -8px;
-  border: 1px solid transparent;    
-  padding: 10px;
-  border-radius: 3px;
-  display: block;
-  position: absolute;
-transition:  .5s ease;
-}
-
-
-
-input[type="checkbox"]:checked + label:before {
-  border: 1px solid transparent;
-  background-color: transparent;
-}
-
-input[type="checkbox"]:checked + label:after {
-  content: "\2764" ;
-  font-size: 19px;
-  position: absolute;
-  top: -1px;
-  left: 1px;
-  transition:  .5s ease;
-} */
-/*                       */
-/*                       */
-
-/* body,
-p {
-  font-family: "Open Sans", sans-serif;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased !important;
-  line-height: 26px;
-  font-size: 15px;
-} */
-
 h1,
 h2,
 h3,
@@ -1213,9 +1162,18 @@ img.testimonial-thumb {
 /* Footer
 ================================================== */
 /*- Footer common */
+
+#wrapper {
+    height: 500px;
+    position: relative;
+}
+        
 .footer {
-  background-color: #dbe6da;
-  color: rgb(213, 213, 213);
+  background-color: #3c78cf;
+  color: #fff;
+  bottom: 0px;
+  width:100%;
+  position: absolute;
 }
 
 .footer-main {
@@ -1230,7 +1188,6 @@ img.testimonial-thumb {
   padding-left: 15px;
   /* text-transform: uppercase; */
   color: #fff;
-  border-left: 3px solid#67AB94;
 }
 
 /* Footer about us */
@@ -1260,7 +1217,7 @@ img.testimonial-thumb {
 .footer-social ul li a i {
   display: block;
   font-size: 16px;
-  color: #999;
+  color: #ffff;
   transition: 400ms;
   padding: 10px 13px;
 }
@@ -1289,17 +1246,6 @@ img.testimonial-thumb {
   color: #67AB94;
 }
 
-/* .working-hours {
-  padding-right: 10px;
-}
-
-.working-hours .text-right {
-  float: right;
-} */
-
-/* Sub Pages
-================================================== */
-/*-- Title border --*/
 .main-container .border-left {
   margin-bottom: 30px;
 }
