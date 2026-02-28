@@ -4,7 +4,7 @@ const main = Vue.createApp({});
 // Create a new Vue component
 main.component("nav-component", {
   template: `
-        <nav class="navbar fixed-top w-100" style='background-color:#fbaee3; background-image: url("/images/navBarBg.png"); background-size: 520px; background-repeat: no-repeat; background-position: right; background-position-y: 0px;'>
+        <nav class="navbar navbar-expand-xl fixed-top w-100" style='background-color:#fbaee3; background-image: url("/images/navBarBg.png"); background-size: 520px; background-repeat: no-repeat; background-position: right; background-position-y: 0px;'>
           <a class="navbar-brand" href="../home.html">
             <img class='mx-4'src='/images/logo.png' style='width: 150px;'>
           </a>
