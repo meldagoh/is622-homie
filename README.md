@@ -6,8 +6,8 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#installation">How do I install Home:Bound?</a></li>
-    <li><a href="#running">How do I run Home:Bound?</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#running">Running</a></li>
   </ol>
 </details>
 
@@ -19,41 +19,67 @@
 
 <a id="installation"></a>
 
-# Installation
+<img src='images/logo.png' width='150px' style='margin-bottom: 30px'>
 
-<br>
+_A room‑rental marketplace built for international students in Singapore._
 
-1. Download and install <a href="https://code.visualstudio.com/download">Visual Studio Code</a>.
+Built by **Team 1** for the IS622 Digital Product Management course, *homie!* makes it easy to list a room, browse available properties, and manage saved listings through a clean, mobile‑friendly interface.
 
-2. Download and install <a href="https://desktop.github.com/">Github Desktop</a>.
+## 🧩 Features
 
-3. Download and install git.
-  ```
-  npm install -g git
-  ```
+- Browse property listings with images and pricing
+- User profile page with editable picture, username, email, and password
+- Responsive layout built with Vue, Bootstrap and custom CSS
+- Smooth animations via Slick carousel and AOS
 
-4. Clone the Home:Bound repository.
-  ```sh
-   git clone https://github.com/kelsieee/home-bound.git
-  ```
+## 🛠 Tech Stack
 
-5. Launch GitHub Desktop and select the home-bound repository. 
+- HTML, CSS, JavaScript (vanilla + Bootstrap)
+- jQuery for DOM manipulation and plugins
+- SweetAlert2 for user notifications
+- Slick carousel for listing slideshows
+- AOS (Animate on Scroll) for entrance effects
+- Static site; no backend – data stored in `localStorage`
 
-6. Install the Live Server extension on Visual Studio Code (extension ID: ritwickdey.LiveServer).
-  <br>
-  <img src="live-server.png" width="500px"/>
-  <br>
+## 📁 Installation & Development
 
-7. Launch <strong>newlanding.html</strong> using the Live Server (right click on the file > "Open with Live Server" option) and you're good to go! 
+1. **Clone the repository**
+   ```sh
+   gh repo clone meldagoh/is622-homie
+   cd is622-homie
+   ```
+2. **Open in VS Code**
+   - Download/install [Visual Studio Code](https://code.visualstudio.com/download) if needed.
+   - (Optional) use [GitHub Desktop](https://desktop.github.com/) for GUI git operations.
+3. **Run a local server**
+   - Install the `Live Server` extension (`ritwickdey.LiveServer`).
+   - Right‑click any `.html` file (e.g. `landing.html` or `home.html`) and choose **Open with Live Server**.
 
-<br>
+> The site is entirely client‑side; no build process is required.
 
-<a id="running"></a>
+## 🧑‍💻 Usage
 
-# Running
+- Navigate between pages via the top navigation component.
+- Click **Explore** on the landing page to view listings.
+- Use the profile page to view or edit your details. Changes persist in your browser's storage.
+
+## 📝 Notes for Contributors
+
+- HTML files are located in the root and subfolders (e.g., `/profile`, `/propertyListings`).
+- CSS is split between `home.css` and page‑specific styles like `profile/profile.css`.
+- `profile/profile.js` contains the JavaScript logic for the profile page.
+
+### Adding a New Page
+1. Create a new `.html` file and add it to the navigation component if necessary.
+2. Add any new styles to an existing CSS file or create a new one and link it in the HTML head.
+3. Write JavaScript for interactivity; include scripts at the bottom of the HTML or in separate `.js` files.
+
+## 📬 Questions or Feedback
+
+Contact the project maintainers or refer to the course materials for guidance.
+
+<img src='images/houseFooter.png' width='100px' style='margin-top: 20px;'>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-You don't have to do anything! Just visit this <a href="https://home-bound.vercel.app/newlanding.html">link</a> for our <strong>live website</strong>!
 
 <br><br>
