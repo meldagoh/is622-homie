@@ -21,7 +21,7 @@
 
 <img src='images/logo.png' width='150px' style='margin-bottom: 30px'>
 
-_A room‑rental marketplace built for international students in Singapore._
+_A room‑rental marketplace built for all internationals in Singapore._
 
 Built by **Team 1** for the IS622 Digital Product Management course, *homie!* makes it easy to list a room, browse available properties, and manage saved listings through a clean, mobile‑friendly interface.
 
