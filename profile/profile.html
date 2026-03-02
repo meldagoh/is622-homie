@@ -6,122 +6,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Profile</title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css" />
-  <!-- <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
-  <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" /> -->
-
-  <!-- FontAwesome -->
-  <link rel="stylesheet" href="../plugins/fontawesome/css/all.min.css">
-  <!-- Animation -->
-  <link rel="stylesheet" href="../plugins/animate-css/animate.css">
-  <!-- slick Carousel -->
-  <link rel="stylesheet" href="../plugins/slick/slick.css">
-  <link rel="stylesheet" href="../plugins/slick/slick-theme.css">
   <!-- Template styles-->
   <link rel="stylesheet" href="../home.css">
-
   <!-- head icon -->
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
-
-  <!-- <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css"> -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
-  <!-- <script type="module" src="/roomieCreation/roomieCreation.js"></script> -->
-
+  <link rel="stylesheet" href="profile.css">
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-  
-  <style>
-
-    .heading {
-      font-family: Montserrat;
-      font-size: 45px;
-      color: green;
-    }
-
-    .form-check, .form-check-input {
-      font-family: "Montserrat", sans-serif;
-      font-size: 14px;
-    }
-
-    p {
-      font-family: "Montserrat", sans-serif;
-    }
-
-    table {
-      border-collapse: separate; 
-      border-spacing: 0 20px;
-     }
-     
-  </style>
-
 </head>
 
 <body>
+
   <div id="main">
     <nav-component></nav-component>
   </div>
 
-  <div id="profileinfo">
-    <!-- <div class="container-fluid mx-auto w-75 align-items-center mt-5">
-      <div class="row">
-  
-        <div class="col-lg-6 mt-5 justify-content-center mx-auto">
-          <div></div>
-          <label for="photo">
-            <img id='preview' src="../images/a-small-balcony-on-a-yellow-apartment-building-a-white-sofa--c1f96de1177ecfedc73a9651dd94ecf0.webp" class="img-fluid mb-4" alt="pic" style="border-radius:10px; max-width:500px;width:100%; " />
-          </label>
-        </div>
-  
-        <div class="col-lg-6 mt-4 justify-content-center mx-auto">
-          <div style="overflow-x:auto;">
-            <table class="mx-auto text-center ">
-              <th colspan="2">
-                <h3 class="fw-semibold mb-3 ">Personal Details</h3>
-              </th>
-              <tr>
-                <td><h6 class="p-2">Name</h6></td>
-                <td style="background-color:#dbe6da; padding-left: 10px; padding-right: 10px; border-radius: 10px;font-size: small">
-                Your Full Name Here
-                </td>
-              </tr>
-  
-              <tr>
-                <td><h6 class="p-2">Birthday</h6></td>
-                <td style="background-color:#dbe6da; padding-left: 10px; padding-right: 10px; border-radius: 10px; font-size: small; ">
-                  Your Date Of Birth Here
-                </td>
-              </tr>
-  
-              <tr>
-                <td><h6 class="p-2">Email</h6></td>
-                <td style="background-color:#dbe6da; padding-left: 10px; padding-right: 10px;  border-radius: 10px;font-size: small;">
-                  Your Email Here
-                </td>
-              </tr>
-            </table>
+  <div class="body-inner mb-5" style="margin-top: 150px;">
+    <div class="profile-container">
+      <div class="profile-card">
+        
+        <!-- Profile Picture Section -->
+        <div class="profile-picture-section">
+          <img id="profilePictureDisplay" src="https://via.placeholder.com/150?text=Profile" alt="Profile Picture" class="profile-picture">
+          <input type="file" id="profilePictureInput" accept="image/*" style="display: none;">
+          
+          <!-- Upload overlay (visible in edit mode) -->
+          <div id="uploadOverlay" class="upload-overlay hidden">
+            <button type="button" class="btn btn-upload" onclick="document.getElementById('profilePictureInput').click()">
+              <i class="bi bi-cloud-upload"></i> Upload Photo
+            </button>
           </div>
+
+          <!-- Pencil toggle button -->
+          <button type="button" class="btn btn-upload-icon" id="editModeToggleBtn">
+            <i class="bi bi-pencil-square"></i>
+          </button>
         </div>
+
+        <!-- Toggle Edit Button -->
+        <div class="edit-toggle-section">
+          <button id="toggleEditBtn" class="btn btn-edit-toggle mx-auto" onclick="profilePage.toggleEditMode()">
+            <i class="bi bi-pencil-square"></i> Edit Profile
+          </button>
+        </div>
+
+        <br>
+
+        <!-- Profile Form -->
+        <form id="profileForm" class="profile-form">
+          <!-- Username -->
+          <div class="form-group">
+            <label for="username">Username</label>
+            <div class="form-control-wrapper">
+              <span id="usernameView" class="form-value"></span>
+              <input type="text" id="username" class="form-control hidden-input" placeholder="Enter username">
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">Email</label>
+            <div class="form-control-wrapper">
+              <span id="emailView" class="form-value"></span>
+              <input type="email" id="email" class="form-control hidden-input" placeholder="Enter email">
+            </div>
+          </div>
+
+          <!-- Password -->
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="form-control-wrapper">
+              <span id="passwordView" class="form-value password-masked">••••••••</span>
+              <input type="password" id="password" class="form-control hidden-input" placeholder="Enter new password">
+              <small class="form-text text-muted">Leave blank to keep current password</small>
+            </div>
+          </div>
+
+          <!-- Edit Mode Buttons -->
+          <div id="editButtons" class="edit-buttons hidden">
+            <button type="submit" class="btn btn-save">
+              <i class="bi bi-check-circle"></i> Save Changes
+            </button>
+            <button type="button" class="btn btn-cancel" onclick="profilePage.cancelEdit()">
+              <i class="bi bi-x-circle"></i> Cancel
+            </button>
+          </div>
+        </form>
       </div>
-    </div> -->
+    </div>
   </div>
 
-
-<div class="row w-50 mx-auto t-4 mb-4">
-  <div class="mx-auto text-center  pb-5">
-    <button id="signOut" type="button" class="mx-auto justify-content-center btn btn-secondary btn-lg w-50 rounded-pill">
-      <a style="text-decoration:none; color:white; font-family: Montserrat, sans-serif;">Log out</a> 
-    </button>
+  <div id="wrapper">
+        <footer id="footer" class="footer pb-3 flex align-items-center">
+            <div class="container pb-4">
+                <div class="row justify-content-between">
+                    <h3 class="pt-5 ps-4 fw-semibold" style="color:#fbaee3">About Us</h3>
+                    <p style="color:#fff" class="mt-3 mb-3 ps-4 fw-light">Find your affordable, clean and safe room to rent. Our mission is to simplify the process of connecting international students in 
+                        Singapore with and allow everyone to list their home easily.
+                        <br><br>
+                        <i>Made with love by Team 1 for IS622 Digital Product Management.</i>
+                    </p>
+                    <img src="../images/houseFooter.png" class="py-3" style="width: 120px;">
+                </div>
+            </div>
+          </footer>
     </div>
-</div>
+</body>
 
-
-</script>
 <!-- Vue.js Version 3 CDN -->
 <script src="../plugins/jQuery/jquery.min.js"></script>
 <!-- Bootstrap jQuery -->
@@ -134,7 +129,7 @@
 
 <!-- Refer to my own external JS -->
 <script src="../navComponent/navComponent.js"></script>
-<script type="module" src="profile.js"></script>
+<script src="profile.js"></script>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
