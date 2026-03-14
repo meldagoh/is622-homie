@@ -1,134 +1,83 @@
-//find all elements with "item" class
-//function to initially loop through all items and hide them
-// function hide_init(){
-//    for (var i = 0; i < alls.length; ++i) { 
-//  alls[i].style.display = 'none'; 
-// }
-// }
+document.addEventListener('DOMContentLoaded', function () {
+    const filterDate  = document.getElementById('filterDate');
+    const filterPrice = document.getElementById('filterPrice');
+    const priceLabel  = document.getElementById('priceLabel');
+    const resetBtn    = document.getElementById('resetFilters');
+    const noResults   = document.getElementById('noResults');
 
-
-// function show_all(){  
-//   //loop through all items and show them
-//    for (var i = 0; i < alls.length; ++i) { 
-//  alls[i].style.display = 'inline-block'; 
-// } 
-// }
-
-
-function show_one_dollar(){  
-    var onedollars = document.querySelectorAll('.onedollar');
-    var alls = document.querySelectorAll('.project_container');
-    for (var i = 0; i < alls.length; ++i) { 
-        alls[i].style.display = 'none'
+    // Flatten all card cols into one array regardless of which .row they sit in
+    function getAllCards() {
+        return Array.from(document.querySelectorAll('#lodgingDiv .col[data-price]'));
     }
-   for (var i = 0; i < onedollars.length; ++i) { 
-    onedollars[i].style.display = 'inline-block'; 
-} 
-}
 
-function show_two_dollar(){  
-    var twodollars = document.querySelectorAll('.twodollar');
-    var alls = document.querySelectorAll('.project_container');
-    for (var i = 0; i < alls.length; ++i) { 
-        alls[i].style.display = 'none'
+    function applyFilters() {
+        const maxPrice     = parseInt(filterPrice.value);
+        const selectedDate = filterDate.value;
+        const occValue     = document.querySelector('input[name="filterOccupancy"]:checked').value;
+
+        priceLabel.textContent = '$' + maxPrice.toLocaleString();
+
+        const cards = getAllCards();
+        let visible = 0;
+
+        cards.forEach(function (card) {
+            const price     = parseInt(card.dataset.price);
+            const available = card.dataset.available;
+            const occupied  = parseInt(card.dataset.occupied);
+            const capacity  = parseInt(card.dataset.capacity);
+            const isFull    = occupied >= capacity;
+
+            const priceOk  = price <= maxPrice;
+            const dateOk   = !selectedDate || available <= selectedDate;
+            const occOk    = occValue === 'all' || !isFull;
+            const shouldShow = priceOk && dateOk && occOk;
+            const isCurrentlyHidden = card.classList.contains('d-none');
+
+            if (shouldShow) {
+                if (isCurrentlyHidden) {
+                    // Animate card in
+                    card.classList.remove('d-none', 'card-hiding');
+                    // Force reflow so animation triggers fresh
+                    void card.offsetWidth;
+                    card.classList.add('card-showing');
+                    card.addEventListener('animationend', function handler() {
+                        card.classList.remove('card-showing');
+                        card.removeEventListener('animationend', handler);
+                    });
+                }
+                visible++;
+            } else {
+                if (!isCurrentlyHidden) {
+                    // Animate card out, then hide
+                    card.classList.add('card-hiding');
+                    card.addEventListener('transitionend', function handler() {
+                        card.classList.add('d-none');
+                        card.classList.remove('card-hiding');
+                        card.removeEventListener('transitionend', handler);
+                    });
+                }
+            }
+        });
+
+        // Show/hide no-results after transitions settle
+        setTimeout(function () {
+            const anyVisible = getAllCards().some(c => !c.classList.contains('d-none'));
+            noResults.classList.toggle('d-none', anyVisible);
+        }, 400);
     }
-   for (var i = 0; i < twodollars.length; ++i) { 
-    twodollars[i].style.display = 'inline-block'; 
-} 
-}
 
-function show_three_dollar(){  
-    var threedollars = document.querySelectorAll('.threedollar');
-    var alls = document.querySelectorAll('.project_container');
-    for (var i = 0; i < alls.length; ++i) { 
-        alls[i].style.display = 'none'
-    }
-   for (var i = 0; i < threedollars.length; ++i) { 
-    threedollars[i].style.display = 'inline-block'; 
-} 
-}
+    filterPrice.addEventListener('input', applyFilters);
+    filterDate.addEventListener('change', applyFilters);
+    document.querySelectorAll('input[name="filterOccupancy"]').forEach(function (radio) {
+        radio.addEventListener('change', applyFilters);
+    });
 
-function show_wifiavailable(){
-    var wifiavailable = document.querySelectorAll('.wifiavailable');
-    var alls = document.querySelectorAll('.project_container');
-    for (var i = 0; i < alls.length; ++i) { 
-        alls[i].style.display = 'none'
-    }
-   for (var i = 0; i < wifiavailable.length; ++i) { 
-    wifiavailable[i].style.display = 'inline-block'; 
-} 
-}
+    resetBtn.addEventListener('click', function () {
+        filterDate.value  = '';
+        filterPrice.value = 2000;
+        document.getElementById('occAll').checked = true;
+        applyFilters();
+    });
 
-function show_nowifi(){
-    var nowifi = document.querySelectorAll('.nowifi');
-    var alls = document.querySelectorAll('.project_container');
-    for (var i = 0; i < alls.length; ++i) { 
-        alls[i].style.display = 'none'
-    }
-   for (var i = 0; i < nowifi.length; ++i) { 
-    nowifi[i].style.display = 'inline-block'; 
-} 
-}
-
-
-function show_one_room (){
-    var oneroom = document.querySelectorAll('.room1');
-    var alls = document.querySelectorAll('.project_container');
-    for (var i = 0; i < alls.length; ++i) { 
-        alls[i].style.display = 'none'
-    }
-   for (var i = 0; i < oneroom.length; ++i) { 
-    oneroom[i].style.display = 'inline-block'; 
-} 
-}
-
-function show_two_room (){
-    var tworoom = document.querySelectorAll('.room2');
-    var alls = document.querySelectorAll('.project_container');
-    for (var i = 0; i < alls.length; ++i) { 
-        alls[i].style.display = 'none'
-    }
-   for (var i = 0; i < tworoom.length; ++i) { 
-    tworoom[i].style.display = 'inline-block'; 
-} 
-}
-
-function show_three_room (){
-    var threeroom = document.querySelectorAll('.room3');
-    var alls = document.querySelectorAll('.project_container');
-    for (var i = 0; i < alls.length; ++i) { 
-        alls[i].style.display = 'none'
-    }
-   for (var i = 0; i < threeroom.length; ++i) { 
-    threeroom[i].style.display = 'inline-block'; 
-} 
-}
-
-function show_four_room (){
-    var fourroom = document.querySelectorAll('.room4');
-    var alls = document.querySelectorAll('.project_container');
-    for (var i = 0; i < alls.length; ++i) { 
-        alls[i].style.display = 'none'
-    }
-   for (var i = 0; i < fourroom.length; ++i) { 
-    fourroom[i].style.display = 'inline-block'; 
-} 
-}
-
-function show_five_room (){
-    var fiveroom = document.querySelectorAll('.room5');
-    var alls = document.querySelectorAll('.project_container');
-    for (var i = 0; i < alls.length; ++i) { 
-        alls[i].style.display = 'none'
-    }
-   for (var i = 0; i < fiveroom.length; ++i) { 
-    fiveroom[i].style.display = 'inline-block'; 
-} 
-}
-
-function reset(){
-    var alls = document.querySelectorAll('.project_container');
-    for (var i = 0; i < alls.length; ++i) { 
-         alls[i].style.display = 'inline-block'; 
-    } 
-}
+    applyFilters();
+});

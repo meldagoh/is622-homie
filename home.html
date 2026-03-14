@@ -46,12 +46,100 @@
                     </div>
                 </div>
 
-                <!-- add filters here-->
+                <div class="card border-0 shadow-sm mb-5 px-4 py-4" id="filterSection">
+                    <div class="d-flex align-items-center mb-4 gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#0b60f6" class="bi bi-funnel-fill" viewBox="0 0 16 16">
+                            <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5z"/>
+                        </svg>
+                        <span class="filter-heading">Filter Listings</span>
+                    </div>
+                    <div class="row align-items-end g-0">
+
+                        <!-- Available From -->
+                        <div class="col-12 col-md pe-md-4">
+                            <div class="filter-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#0b60f6" class="me-1 mb-1" viewBox="0 0 16 16">
+                                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                                </svg>
+                                Available From
+                            </div>
+                            <input type="date" class="form-control" id="filterDate">
+                        </div>
+
+                        <div class="filter-divider d-none d-md-block"></div>
+
+                        <!-- Max Price -->
+                        <div class="col-12 col-md px-md-4 mt-4 mt-md-0">
+                            <div class="filter-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#0b60f6" class="me-1 mb-1" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                    <path d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518z"/>
+                                </svg>
+                                Max Price: <span id="priceLabel">$2,000</span> / month
+                            </div>
+                            <input type="range" class="form-range" id="filterPrice" min="500" max="2000" step="100" value="2000">
+                            <div class="d-flex justify-content-between price-range-labels">
+                                <span>$500</span><span>$2,000</span>
+                            </div>
+                        </div>
+
+                        <div class="filter-divider d-none d-md-block"></div>
+
+                        <!-- Availability -->
+                        <div class="col-12 col-md px-md-4 mt-4 mt-md-0">
+                            <div class="filter-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#0b60f6" class="me-1 mb-1" viewBox="0 0 16 16">
+                                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                                </svg>
+                                Occupancy
+                            </div>
+                            <div class="d-flex gap-3 mt-1">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="filterOccupancy" id="occAll" value="all" checked>
+                                    <label class="form-check-label" for="occAll">All listings</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="filterOccupancy" id="occAvail" value="available">
+                                    <label class="form-check-label" for="occAvail">Has vacancy</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-divider d-none d-md-block"></div>
+
+                        <!-- Reset -->
+                        <div class="col-12 col-md-auto ps-md-4 mt-4 mt-md-0">
+                            <button class="btn w-100" id="resetFilters">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="me-1 mb-1" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"/>
+                                    <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"/>
+                                </svg>
+                                Reset
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- No results message -->
+                <div id="noResults" class="text-center py-5 d-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-house-x mb-3 d-block mx-auto" viewBox="0 0 16 16">
+                        <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708z"/>
+                        <path d="M7.5 8.5a.5.5 0 0 0-1 0V14H2V9.293l6-6 2.47 2.47A.5.5 0 0 0 11 5.5V8h1v-.5a.5.5 0 0 0-.146-.354L9.5 5.793V8.5a.5.5 0 0 0 1 0V7h1v1.5a.5.5 0 0 0 1 0V6.5"/>
+                        <path d="M12.854 10.146a.5.5 0 0 0-.708 0L11 11.293l-1.146-1.147a.5.5 0 0 0-.708.708L10.293 12l-1.147 1.146a.5.5 0 0 0 .708.708L11 12.707l1.146 1.147a.5.5 0 0 0 .708-.708L11.707 12l1.147-1.146a.5.5 0 0 0 0-.708"/>
+                    </svg>
+                    <p class="mb-0 fw-semibold">No listings match your filters.</p>
+                    <p class="small mt-1">Try adjusting your criteria above.</p>
+                </div>
 
                 <!-- property listing cards -->
                 <div id="lodgingDiv">
                     <div class="row row-cols-1 row-cols-md-3 g-4">
-                        <div class="col">
+                        <div class="col" 
+                             data-price="1800" 
+                             data-available="2026-03-01" 
+                             data-occupied="3" 
+                             data-capacity="10">
                             <a href="loading/loading1.html">
                                 <div class="card">
                                     
@@ -108,7 +196,12 @@
                             </a>
                             
                         </div>
-                        <div class="col">
+
+                        <div class="col"
+                             data-price="1500"
+                             data-available="2026-03-13"
+                             data-occupied="3"
+                             data-capacity="6">
                             <a href="loading/loading2.html">
                                 <div class="card">
                                     
@@ -160,7 +253,12 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col">
+
+                        <div class="col"
+                             data-price="750"
+                             data-available="2026-04-01"
+                             data-occupied="3"
+                             data-capacity="5">
                             <a href="loading/loading3.html">
                                 <div class="card">
                                     
@@ -211,9 +309,12 @@
                                 </div>
                             </a>
                         </div>
-                    </div>
-                    <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
-                        <div class="col">
+
+                        <div class="col"
+                             data-price="500"
+                             data-available="2026-04-01"
+                             data-occupied="4"
+                             data-capacity="4">
                             <a href="loading/loading4.html">
                                 <div class="card">
 
@@ -236,7 +337,12 @@
                                     </div>
 
                                     <div class="card-body">
-                                        <h5 class="card-title">201 Victoria Street</h5>
+                                        <h5 class="card-title d-flex align-items-center gap-2">
+                                            201 Victoria Street
+                                            <span class="badge" style="background-color: red; color: #fff; font-size: 0.72rem;">
+                                                Fully Occupied
+                                            </span>
+                                        </h5>
                                         <p class="lh-lg">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0b60f6" class="bi bi-geo-alt-fill mb-1 m-1" viewBox="0 0 16 16">
                                             <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>

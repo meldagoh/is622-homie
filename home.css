@@ -241,6 +241,133 @@ a:focus {
   }
 }
 
+/* Filter section
+================================================== */
+
+#filterSection {
+    background: #fdf0fa;
+    border: 1.5px solid #f5cfe9 !important;
+    border-radius: 14px !important;
+    transition: none !important;
+    transform: none !important;
+}
+
+/* removes hovering for fitler section */
+#filterSection:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+#filterSection .filter-label {
+    font-family: "Sora", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #212121;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+#filterSection .filter-heading {
+    font-family: "Sora", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0b60f6;
+}
+
+#filterSection .form-control,
+#filterSection .form-select {
+    border: 1.5px solid #c5d8ff;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #212121;
+    background-color: #fff;
+    transition: border-color 0.2s;
+}
+
+#filterSection .form-control:focus {
+    border-color: #0b60f6;
+    box-shadow: 0 0 0 3px rgba(11,96,246,0.1);
+}
+
+#filterSection .form-range {
+    accent-color: #0b60f6;
+}
+
+#filterSection .price-range-labels {
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 4px;
+}
+
+#filterSection #priceLabel {
+    color: #0b60f6;
+    font-weight: 700;
+}
+
+#filterSection .filter-divider {
+    width: 1.5px;
+    background: #d6e4ff;
+    align-self: stretch;
+    margin: 0 4px;
+}
+
+#filterSection .form-check-input:checked {
+    background-color: #0b60f6;
+    border-color: #0b60f6;
+}
+
+#filterSection .form-check-input:focus {
+    box-shadow: 0 0 0 3px rgba(11,96,246,0.15);
+}
+
+#filterSection .form-check-label {
+    font-size: 0.88rem;
+    color: #333;
+}
+
+#resetFilters {
+    border: 1.5px solid #0b60f6;
+    color: #0b60f6;
+    border-radius: 8px;
+    font-family: "Sora", sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: all 0.2s;
+    background: transparent;
+}
+
+#resetFilters:hover {
+    background: #0b60f6;
+    color: #fff;
+}
+
+/* Card animation */
+#lodgingDiv .col {
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+#lodgingDiv .col.card-hiding {
+    opacity: 0;
+    transform: scale(0.92);
+    pointer-events: none;
+}
+#lodgingDiv .col.card-showing {
+    animation: cardFadeIn 0.38s ease forwards;
+}
+@keyframes cardFadeIn {
+    from { opacity: 0; transform: scale(0.93) translateY(10px); }
+    to   { opacity: 1; transform: scale(1)    translateY(0);    }
+}
+
+/* No results */
+#noResults {
+    font-family: "Sora", sans-serif;
+    color: #888;
+}
+#noResults svg {
+    color: #fbaee3;
+}
+
 
 /* Header area
 ================================================== */
