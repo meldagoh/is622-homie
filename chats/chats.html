@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css" />
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"/>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="chats.css">
+</head>
+<body>
+    <div id="main">
+        <nav-component></nav-component>
+    </div>
+
+    <div class="body-inner" style="margin-top: 100px;">
+        <section class="mx-auto">
+            <div class="container">
+
+                <!-- opening header -->
+                <div class="row text-align-left ms-1">
+                    <div>
+                        <h1 class="fw-bold pb-2">Chats</h1>
+                    </div>
+                </div>
+
+                <!-- No chats empty state -->
+                <div id="noResults" class="text-center py-5 mx-auto">
+                    <img class="mb-4" src="../images/tumbleweed.png" width="60px">
+                    <p class="mb-0 fw-semibold">No chats found.</p>
+                    <p class="small mt-1">Start a conversation by contacting a property agent.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <div id="wrapper" style="background-color: #3c78cf; bottom: 0; position: fixed; width: 100%;">
+            <footer id="footer" class="footer pb-3 flex align-items-center">
+                <div class="container pb-4">
+                    <div class="row justify-content-between">
+                            <h3 class="pt-5 ps-4 fw-semibold" style="color:#fbaee3">About Us</h3>
+                            <p style="color:#fff" class="mt-3 mb-3 ps-4 fw-lighter">Find your affordable, clean and safe room to rent. Our mission is to simplify the process of connecting international students in 
+                                Singapore with and allow everyone to list their home easily.
+                                <br><br>
+                                <i>Made with love by Team 1 for IS622 Digital Product Management.</i>
+                            </p>
+                            <img src="../images/houseFooter.png" class="py-3" style="width: 120px;">
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <div>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+        <script src="../navComponent/navComponent.js"></script>
+        <script src="plugins/jQuery/jquery.min.js"></script>
+        <script src="plugins/bootstrap/bootstrap.min.js" defer></script>
+        <script src="plugins/slick/slick.min.js"></script>
+        <script src="plugins/slick/slick-animation.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/shufflejs@5/dist/shuffle.min.js" defer></script>
+        <script src="filter.js"></script>
+        <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="home.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>         
+    </div>
+</body>
+</html>
