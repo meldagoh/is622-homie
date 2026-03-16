@@ -9,8 +9,7 @@ main.component("navbar-component", {
         <img class='mx-4' src='/images/logo.png' style='width: 150px; transition: transform 0.2s ease;' onmouseover="this.style.transform='translateY(-4px) scale(1.04)'" onmouseout="this.style.transform='translateY(0) scale(1)'">
       </a>
 
-      <div class="d-flex align-items-center me-3 gap-2">
-
+      <div class="d-flex align-items-center me-4 gap-2">
         <!-- Chats list button -->
         <a class="nav-link d-flex flex-column align-items-center me-3" href="../chats/chats.html"
            style="text-decoration: none; color: #1a1a2e; transition: transform 0.2s ease;"
@@ -25,8 +24,13 @@ main.component("navbar-component", {
         <!-- Profile button -->
         <a class="nav-link" href="/profile/profile.html"
            style="text-decoration: none; color: #1a1a2e; transition: transform 0.2s ease;"
-           onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-          <img src="/images/profile.png" style="height: 60px; margin-right: 5px;">
+           onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+          <span style="position: relative; display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 60px; background: rgba(255,255,255,0.35); border-radius: 50%;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#1a1a2e" class="bi bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+            </svg>
+          </span>
         </a>
       </div>
     </nav>
