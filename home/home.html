@@ -82,7 +82,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#0b60f6" class="me-1 mb-1" viewBox="0 0 16 16">
                                     <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
                                 </svg>
-                                Occupancy
+                                Vacancy
                             </div>
                             <div class="d-flex gap-3 mt-1">
                                 <div class="form-check">
@@ -92,6 +92,32 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="filterOccupancy" id="occAvail" value="available">
                                     <label class="form-check-label" for="occAvail">Has vacancy</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-divider d-none d-md-block"></div>
+
+                        <!-- Tenant Preference -->
+                        <div class="col-12 col-md px-md-4 mt-4 mt-md-0">
+                            <div class="filter-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#0b60f6" class="bi bi-person-heart me-1 mb-1" viewBox="0 0 16 16">
+                                    <path d="M9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4m13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276Z"/>
+                                </svg>
+                                Tenant Preference
+                            </div>
+                            <div class="d-flex gap-5 mt-1">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="filterPreferredGender" id="genderAny" value="any" checked>
+                                    <label class="form-check-label" for="genderAny">Any</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="filterPreferredGender" id="genderWomenOnly" value="women-only">
+                                    <label class="form-check-label" for="genderWomenOnly">Women only</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="filterPreferredGender" id="genderCoEd" value="co-ed">
+                                    <label class="form-check-label nowrap" for="genderCoEd">Co-ed</label>
                                 </div>
                             </div>
                         </div>
@@ -122,11 +148,14 @@
                 <!-- property listing cards -->
                 <div id="lodgingDiv">
                     <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                        <!-- property listing 1 -->
                         <div class="col" 
                              data-price="1800" 
                              data-available="2026-03-01" 
                              data-occupied="3" 
-                             data-capacity="10">
+                             data-capacity="10"
+                             data-preferred-gender="co-ed">
                             <a href="/loading/loading1.html">
                                 <div class="card">
                                     
@@ -184,11 +213,13 @@
                             
                         </div>
 
+                        <!-- property listing 2 -->
                         <div class="col"
                              data-price="1500"
                              data-available="2026-03-13"
                              data-occupied="3"
-                             data-capacity="6">
+                             data-capacity="6"
+                             data-preferred-gender="women-only">
                             <a href="/loading/loading2.html">
                                 <div class="card">
                                     
@@ -241,11 +272,13 @@
                             </a>
                         </div>
 
+                        <!-- property listing 3 -->
                         <div class="col"
                              data-price="750"
                              data-available="2026-04-01"
                              data-occupied="3"
-                             data-capacity="5">
+                             data-capacity="5"
+                             data-preferred-gender="co-ed">
                             <a href="/loading/loading3.html">
                                 <div class="card">
                                     
@@ -297,11 +330,13 @@
                             </a>
                         </div>
 
+                        <!-- property listing 4 -->
                         <div class="col"
                              data-price="500"
                              data-available="2026-04-01"
                              data-occupied="4"
-                             data-capacity="4">
+                             data-capacity="4"
+                             data-preferred-gender="women-only">
                             <a href="/loading/loading4.html">
                                 <div class="card">
 
