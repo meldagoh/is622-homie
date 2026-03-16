@@ -16,7 +16,7 @@
 </head>
 <body>
     <div id="main">
-        <nav-component></nav-component>
+        <navbar-component></navbar-component>
     </div>
 
     <div class="body-inner" style="margin-top: 150px;">
@@ -234,7 +234,7 @@
                           data-bs-toggle="tooltip"
                           data-bs-html="true"
                           data-bs-placement="top"
-                          title="<strong style='color:#198754'>&#9679; Green</strong> Low occupancy, plenty of rooms available<br><strong style='color:#fd7e14'>&#9679; Orange</strong> Intermediate, filling up soon<br><strong style='color:#dc3545'>&#9679; Red</strong> Almost or completely full, act fast!<br><em>Note: Occupancy rate is updated in real-time and may change frequently.</em>"
+                          title="<strong style='color:#198754'>&#9679; Green</strong> Low occupancy, plenty of rooms available<br><strong style='color:#fd7e14'>&#9679; Orange</strong> Intermediate, filling up soon<br><strong style='color:#dc3545'>&#9679; Red</strong> Almost or completely full<br><em>Note: Occupancy rate is updated in real-time and may change frequently.</em>"
                           tabindex="0">
                           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-info-circle mb-1" viewBox="0 0 16 16">
                             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
@@ -280,20 +280,8 @@
             </div>
         </div>
        
-        <div id="wrapper" style="background-color: #3c78cf;">
-            <footer id="footer" class="footer pb-3 flex align-items-center">
-                <div class="container pb-4">
-                    <div class="row justify-content-between">
-                            <h3 class="pt-5 ps-4 fw-semibold" style="color:#fbaee3">About Us</h3>
-                            <p style="color:#fff" class="mt-3 mb-3 ps-4 fw-lighter">Find your affordable, clean and safe room to rent. Our mission is to simplify the process of connecting international students in 
-                                Singapore with and allow everyone to list their home easily.
-                                <br><br>
-                                <i>Made with love by Team 1 for IS622 Digital Product Management.</i>
-                            </p>
-                            <img src="/images/houseFooter.png" class="py-3" style="width: 120px;">
-                    </div>
-                </div>
-            </footer>
+        <div id="footer-mount">
+            <footer-component></footer-component>
         </div>
 
         <!-- ════ Chat Sidebar ════ -->
@@ -305,6 +293,7 @@
                 <div id="chatHeaderInner" class="d-flex mt-2 align-items-center gap-3">
                 <div id="chatHeaderText">
                     <h2 id="chatHeaderAgentName">Sakshi Nikam</h2>
+                    <small>Last seen recently</small>
                 </div>
                 </div>
                 <button id="chatCloseBtn" onclick="closeChatSidebar()" aria-label="Close chat"
@@ -344,7 +333,8 @@
     </div>
     <div>
         <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-        <script src="../navComponent/navComponent.js"></script>
+        <script src="../components/navbar.js"></script>
+        <script src="../components/footer.js"></script>
         <script src="chat.js"></script>
         <script src="plugins/jQuery/jquery.min.js"></script>
         <script src="plugins/bootstrap/bootstrap.min.js" defer></script>

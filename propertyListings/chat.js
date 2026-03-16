@@ -4,7 +4,7 @@
  *
  * Usage:
  *   Include after bootstrap.bundle.min.js:
- *   <script src="../navComponent/chats.js"></script>
+ *   <script src="chat.js"></script>
  *
  *   Trigger open with:  openChatSidebar()
  *   Trigger close with: closeChatSidebar()
@@ -115,9 +115,6 @@
    * Opens the sidebar. Shows the welcome greeting on first open.
    */
   window.openChatSidebar = function () {
-    var nameEl = document.getElementById('chatHeaderAgentName');
-    if (nameEl) nameEl.textContent = agentName;
-
     var sidebar = document.getElementById('chatSidebar');
     var overlay = document.getElementById('chatOverlay');
     if (sidebar) sidebar.classList.add('open');

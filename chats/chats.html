@@ -17,7 +17,7 @@
 </head>
 <body>
     <div id="main">
-        <nav-component></nav-component>
+        <navbar-component></navbar-component>
     </div>
 
     <div class="body-inner" style="margin-top: 100px;">
@@ -32,7 +32,7 @@
                 </div>
 
                 <!-- No chats empty state -->
-                <div id="noResults" class="text-center py-5 mx-auto">
+                <div id="noResults" class="text-center py-5 my-5 mx-auto">
                     <img class="mb-4" src="../images/tumbleweed.png" width="60px">
                     <p class="mb-0 fw-semibold">No chats found.</p>
                     <p class="small mt-1">Start a conversation by contacting a property agent.</p>
@@ -41,26 +41,15 @@
             </div>
         </section>
 
-        <div id="wrapper" style="background-color: #3c78cf; bottom: 0; position: fixed; width: 100%;">
-            <footer id="footer" class="footer pb-3 flex align-items-center">
-                <div class="container pb-4">
-                    <div class="row justify-content-between">
-                            <h3 class="pt-5 ps-4 fw-semibold" style="color:#fbaee3">About Us</h3>
-                            <p style="color:#fff" class="mt-3 mb-3 ps-4 fw-lighter">Find your affordable, clean and safe room to rent. Our mission is to simplify the process of connecting international students in 
-                                Singapore with and allow everyone to list their home easily.
-                                <br><br>
-                                <i>Made with love by Team 1 for IS622 Digital Product Management.</i>
-                            </p>
-                            <img src="../images/houseFooter.png" class="py-3" style="width: 120px;">
-                    </div>
-                </div>
-            </footer>
+        <div id="footer-mount">
+            <footer-component></footer-component>
         </div>
     </div>
 
     <div>
         <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-        <script src="../navComponent/navComponent.js"></script>
+        <script src="../components/navbar.js"></script>
+        <script src="../components/footer.js"></script>
         <script src="plugins/jQuery/jquery.min.js"></script>
         <script src="plugins/bootstrap/bootstrap.min.js" defer></script>
         <script src="plugins/slick/slick.min.js"></script>
