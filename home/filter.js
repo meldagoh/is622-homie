@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const priceLabel  = document.getElementById('priceLabel');
     const resetBtn    = document.getElementById('resetFilters');
     const noResults   = document.getElementById('noResults');
+    const filterLocation = document.getElementById('filterLocation'); // New location filter
 
     // New preferred gender filter radio buttons
     const preferredGenderRadios = document.querySelectorAll('input[name="filterPreferredGender"]');
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const maxPrice     = parseInt(filterPrice.value);
         const selectedDate = filterDate.value;
         const occValue     = document.querySelector('input[name="filterOccupancy"]:checked').value;
+        const locationValue = filterLocation ? filterLocation.value : 'all'; // New location filter value
         
         // New: Get preferred gender filter value
         const preferredGenderValue = document.querySelector('input[name="filterPreferredGender"]:checked').value;
@@ -32,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const occupied  = parseInt(card.dataset.occupied);
             const capacity  = parseInt(card.dataset.capacity);
             const isFull    = occupied >= capacity;
+            const cardLocation = card.dataset.location || 'central'; // New: Get location from data attribute
 
             // New: Get preferred gender from data attribute
             const preferredGender = card.dataset.preferredGender || 'co-ed'; // Default to co-ed if not specified
@@ -39,6 +42,9 @@ document.addEventListener('DOMContentLoaded', function () {
             const priceOk  = price <= maxPrice;
             const dateOk   = !selectedDate || available <= selectedDate;
             const occOk    = occValue === 'all' || !isFull;
+            
+            // New: Location filter logic
+            const locationOk = locationValue === 'all' || cardLocation === locationValue;
             
             // New: Preferred gender filter logic
             let genderOk = true;
@@ -49,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             // 'any' option shows all, no filtering needed
 
-            const shouldShow = priceOk && dateOk && occOk && genderOk;
+            const shouldShow = priceOk && dateOk && occOk && genderOk && locationOk;
             const isCurrentlyHidden = card.classList.contains('d-none');
 
             if (shouldShow) {
@@ -88,6 +94,11 @@ document.addEventListener('DOMContentLoaded', function () {
     filterPrice.addEventListener('input', applyFilters);
     filterDate.addEventListener('change', applyFilters);
     
+    // Location filter listener
+    if (filterLocation) {
+        filterLocation.addEventListener('change', applyFilters);
+    }
+    
     // Occupancy filter listeners
     document.querySelectorAll('input[name="filterOccupancy"]').forEach(function (radio) {
         radio.addEventListener('change', applyFilters);
@@ -103,6 +114,9 @@ document.addEventListener('DOMContentLoaded', function () {
         filterPrice.value = 2000;
         document.getElementById('occAll').checked = true;
         document.getElementById('genderAny').checked = true; // Reset gender filter to 'Any'
+        if (filterLocation) {
+            filterLocation.value = 'all'; // Reset location filter
+        }
         applyFilters();
     });
 

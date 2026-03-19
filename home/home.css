@@ -330,6 +330,25 @@ a:focus {
     color: #333;
 }
 
+#filterLocation {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 0.5rem;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#filterLocation:hover {
+    border-color: #0b60f6;
+}
+
+#filterLocation:focus {
+    border-color: #0b60f6;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(11, 96, 246, 0.25);
+}
+
 #resetFilters {
     border: 1.5px solid #0b60f6;
     color: #0b60f6;

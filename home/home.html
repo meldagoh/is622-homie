@@ -68,7 +68,7 @@
 
                         <!-- Max Price -->
                         <div class="col-12 col-md px-md-4 mt-4 mt-md-0">
-                            <div class="filter-label nowrap">
+                            <div class="filter-label">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#0b60f6" class="me-1 mb-1" viewBox="0 0 16 16">
                                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                                     <path d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518z"/>
@@ -83,7 +83,7 @@
 
                         <div class="filter-divider d-none d-md-block"></div>
 
-                        <!-- Availability -->
+                        <!-- Vacancy -->
                         <div class="col-12 col-md px-md-4 mt-4 mt-md-0">
                             <div class="filter-label">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#0b60f6" class="me-1 mb-1" viewBox="0 0 16 16">
@@ -94,13 +94,34 @@
                             <div class="d-flex gap-3 mt-1">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="filterOccupancy" id="occAll" value="all" checked>
-                                    <label class="form-check-label nowrap" for="occAll">All listings</label>
+                                    <label class="form-check-label" for="occAll">All listings</label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="filterOccupancy" id="occAvail" value="available">
-                                    <label class="form-check-label nowrap" for="occAvail">Has vacancy</label>
+                                    <label class="form-check-label" for="occAvail">Has vacancy</label>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="filter-divider d-none d-md-block"></div>
+
+                        <!-- Location -->
+                        <div class="col-12 col-md px-md-4 mt-4 mt-md-0">
+                            <div class="filter-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#0b60f6" class="me-1 mb-1" viewBox="0 0 16 16">
+                                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                                </svg>
+                                Location
+                            </div>
+                            <select class="form-select mt-1" id="filterLocation" style="font-size: 0.9rem;">
+                                <option value="all">All Regions</option>
+                                <option value="central">Central</option>
+                                <option value="north">North</option>
+                                <option value="south">South</option>
+                                <option value="east">East</option>
+                                <option value="west">West</option>
+                                <option value="north-east">North-East</option>
+                            </select>
                         </div>
 
                         <div class="filter-divider d-none d-md-block"></div>
@@ -113,12 +134,12 @@
                                 </svg>
                                 Tenant Preference
                             </div>
-                            <div class="d-flex gap-5 mt-1">
-                                <div class="form-check">
+                            <div class="mt-2"> <!-- Removed d-flex, added vertical spacing -->
+                                <div class="form-check mb-2"> <!-- Added mb-2 for spacing between options -->
                                     <input class="form-check-input" type="radio" name="filterPreferredGender" id="genderAny" value="any" checked>
                                     <label class="form-check-label" for="genderAny">Any</label>
                                 </div>
-                                <div class="form-check">
+                                <div class="form-check mb-2">
                                     <input class="form-check-input" type="radio" name="filterPreferredGender" id="genderWomenOnly" value="women-only">
                                     <label class="form-check-label nowrap" for="genderWomenOnly">Women only</label>
                                 </div>
@@ -162,7 +183,9 @@
                              data-available="2026-03-01" 
                              data-occupied="3" 
                              data-capacity="10"
-                             data-preferred-gender="co-ed">
+                             data-preferred-gender="co-ed"
+                             data-location="central"
+                             >
                             <a href="/loading/loading1.html">
                                 <div class="card">
                                     
@@ -226,7 +249,9 @@
                              data-available="2026-03-13"
                              data-occupied="3"
                              data-capacity="6"
-                             data-preferred-gender="women-only">
+                             data-preferred-gender="women-only"
+                             data-location="central"
+                             >
                             <a href="/loading/loading2.html">
                                 <div class="card">
                                     
@@ -285,7 +310,9 @@
                              data-available="2026-04-01"
                              data-occupied="3"
                              data-capacity="5"
-                             data-preferred-gender="co-ed">
+                             data-preferred-gender="co-ed"
+                             data-location="south"
+                             >
                             <a href="/loading/loading3.html">
                                 <div class="card">
                                     
@@ -343,7 +370,9 @@
                              data-available="2026-04-01"
                              data-occupied="4"
                              data-capacity="4"
-                             data-preferred-gender="women-only">
+                             data-preferred-gender="women-only"
+                             data-location="central"
+                             >
                             <a href="/loading/loading4.html">
                                 <div class="card">
 
